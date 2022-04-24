@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { AiFillAccountBook } from 'react-icons/ai';
+import {
+    RiChinaRailwayLine,
+    RiBankFill,
+    RiBookmark2Fill,
+    RiBriefcaseFill,
+    RiLogoutBoxLine,
+} from 'react-icons/ri';
+import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi';
 import gsap from 'gsap';
 
 const SideNav = () => {
@@ -9,51 +16,68 @@ const SideNav = () => {
         setOpen(!open);
         console.log(open);
         if (open === true) {
-            gsap.to('.sideBar', { width: '60px' });
+            gsap.to('.sideBar', { width: '40px', paddingLeft: '0' });
         } else {
-            gsap.to('.sideBar', { width: '240px' });
+            gsap.to('.sideBar', { width: '240px', paddingLeft: '8px' });
         }
     };
 
     return (
-        <div className="sideBar h-[100vh] w-[240px] bg-slate-500 fixed overflow-hidden">
-            <h1 className="text-4xl text-left mb-20">Codia</h1>
-            <section className="space-y-10 flex flex-col">
+        <div
+            className="sideBar h-[100vh] w-[240px] bg-[#282944]
+                    text-white fixed overflow-hidden pl-2 pt-20
+                    flex flex-col justify-between"
+        >
+            {open ? (
+                <HiChevronDoubleLeft
+                    size={30}
+                    onClick={handleOpen}
+                    className="cursor-pointer"
+                />
+            ) : (
+                <HiChevronDoubleRight
+                    size={30}
+                    onClick={handleOpen}
+                    className="cursor-pointer"
+                />
+            )}
+            <section className="space-y-2 mb-20">
                 <div
-                    className=" flex items-center cursor-pointer
-                                hover:bg-white rounded-md h-12"
+                    className="flex items-center cursor-pointer
+                                hover:bg-white hover:text-[#282944] rounded-md h-12"
                 >
-                    <AiFillAccountBook className="fixed" size={50} />
-                    <div className="txt text-3xl ml-20">Exercices</div>
+                    <RiChinaRailwayLine className="fixed" size={30} />
+                    <div className="txt text-2xl ml-10">Parcours</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white rounded-md h-12"
+                                hover:bg-white hover:text-[#282944] rounded-md h-12"
                 >
-                    <AiFillAccountBook className="fixed" size={50} />
-                    <div className="txt text-3xl ml-20">Exercices</div>
+                    <RiBankFill className="fixed" size={30} />
+                    <div className="txt text-2xl ml-10">Exercices</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white rounded-md h-12"
+                                hover:bg-white hover:text-[#282944] rounded-md h-12"
                 >
-                    <AiFillAccountBook className="fixed" size={50} />
-                    <div className="txt text-3xl ml-20">Exercices</div>
+                    <RiBookmark2Fill className="fixed" size={30} />
+                    <div className="txt text-2xl ml-10">Cours</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white rounded-md h-12"
+                                hover:bg-white hover:text-[#282944] rounded-md h-12"
                 >
-                    <AiFillAccountBook className="fixed" size={50} />
-                    <div className="txt text-3xl ml-20">Exercices</div>
+                    <RiBriefcaseFill className="fixed" size={30} />
+                    <div className="txt text-2xl ml-10 ">Carriere</div>
                 </div>
             </section>
-            <button
-                onClick={handleOpen}
-                className="w-full text-left text-4xl mt-10"
+            <div
+                className=" flex items-center cursor-pointer
+                                hover:bg-white hover:text-[#282944] rounded-md h-12"
             >
-                X
-            </button>
+                <RiLogoutBoxLine className="fixed" size={30} />
+                <div className="txt text-2xl ml-10 ">Deconnexion</div>
+            </div>
         </div>
     );
 };
