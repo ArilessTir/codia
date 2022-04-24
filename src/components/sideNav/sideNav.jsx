@@ -19,15 +19,15 @@ const SideNav = () => {
         setOpen(!open);
         console.log(open);
         if (open === true) {
-            gsap.to('.sideBar', { minWidth: '35px', paddingLeft: '0' });
+            gsap.to('.sideBar', { width: '35px', paddingLeft: '0' });
         } else {
-            gsap.to('.sideBar', { minWidth: '200px', paddingLeft: '8px' });
+            gsap.to('.sideBar', { width: '200px', paddingLeft: '8px' });
         }
     };
 
     return (
         <div
-            className="sideBar h-[100vh] min-w-[200px] bg-[#282944]
+            className="sideBar h-[100vh] w-[200px] bg-[#282944]
                     text-white fixed  pl-2 pt-20
                     flex flex-col justify-between"
         >
