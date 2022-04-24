@@ -28,8 +28,8 @@ const SideNav = () => {
     return (
         <div
             className="sideBar h-[100vh] w-[200px] bg-[#282944]
-                    text-white fixed  pl-2 pt-20
-                    flex flex-col justify-between"
+                    text-white fixed overflow-hidden pl-2 pt-20
+                    md:flex flex-col justify-between hidden"
         >
             {open ? (
                 <HiChevronDoubleLeft
