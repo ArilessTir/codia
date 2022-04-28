@@ -41,48 +41,48 @@ const SideNav = () => {
                 <HiChevronDoubleRight
                     size={30}
                     onClick={handleOpen}
-                    className="cursor-pointer hover:bg-white hover:text-[#282944] rounded-md"
+                    className="cursor-pointer hover:bg-white  hover:text-[#282944] rounded-md"
                 />
             )}
             <section className="space-y-2 mb-20">
                 <div
                     className="flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiChinaRailwayLine className="fixed" size={30} />
                     <div className="txt text-2xl ml-10">Parcours</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiFileCodeFill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10">Exercices</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiBook2Fill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10">Cours</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiQuestionFill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10 ">Quizz</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <AiFillProject className="fixed" size={30} />
                     <div className="txt text-2xl ml-10 ">Projets</div>
                 </div>
                 <div
                     className=" flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiBriefcaseFill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10 ">Carriere</div>
@@ -90,7 +90,7 @@ const SideNav = () => {
             </section>
             <div
                 className=" flex items-center cursor-pointer
-                                hover:bg-white hover:text-[#282944] rounded-md h-12"
+                                hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
             >
                 <RiLogoutBoxLine className="fixed" size={30} />
                 <div className="txt text-2xl ml-10 ">Deconnexion</div>
