@@ -11,6 +11,7 @@ import {
 import { AiFillProject } from 'react-icons/ai';
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi';
 import gsap from 'gsap';
+import { NavLink } from 'react-router-dom';
 
 const SideNav = () => {
     const [open, setOpen] = useState(true);
@@ -45,48 +46,54 @@ const SideNav = () => {
                 />
             )}
             <section className="space-y-2 mb-20">
-                <div
+                <NavLink
+                    to={'/parcours'}
                     className="flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiChinaRailwayLine className="fixed" size={30} />
                     <div className="txt text-2xl ml-10">Parcours</div>
-                </div>
-                <div
+                </NavLink>
+                <NavLink
+                    to={'/exercices'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiFileCodeFill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10">Exercices</div>
-                </div>
-                <div
+                </NavLink>
+                <NavLink
+                    to={'/cours'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiBook2Fill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10">Cours</div>
-                </div>
-                <div
+                </NavLink>
+                <NavLink
+                    to={'/quizz'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiQuestionFill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10 ">Quizz</div>
-                </div>
-                <div
+                </NavLink>
+                <NavLink
+                    to={'/projets'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <AiFillProject className="fixed" size={30} />
                     <div className="txt text-2xl ml-10 ">Projets</div>
-                </div>
-                <div
+                </NavLink>
+                <NavLink
+                    to={'/carriere'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiBriefcaseFill className="fixed" size={30} />
                     <div className="txt text-2xl ml-10 ">Carriere</div>
-                </div>
+                </NavLink>
             </section>
             <div
                 className=" flex items-center cursor-pointer
