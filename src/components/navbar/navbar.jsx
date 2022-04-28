@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 const NavBar = () => {
     return (
         <nav
@@ -7,7 +8,9 @@ const NavBar = () => {
                         w-full shadow-xl z-50"
         >
             <div className="flex items-center space-x-10">
-                <h1 className="text-[40px] text-white font-bold">Codia</h1>
+                <NavLink to={'/'}>
+                    <h1 className="text-[40px] text-white font-bold">Codia</h1>
+                </NavLink>
                 <div className="relative md:block hidden">
                     <AiOutlineSearch
                         className="absolute text-2xl transform left-0 top-1/2 

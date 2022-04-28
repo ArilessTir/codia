@@ -1,8 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import job from '../assets/images/job.png';
 import training from '../assets/images/training.png';
 import path from '../assets/svg/path.svg';
 import HomeCard from '../components/homeCard/homeCard';
+import Courses from '../pages/Courses';
 
 const HomePage = () => {
     const cardData = [
@@ -36,8 +38,12 @@ const HomePage = () => {
                     Construis-toi un socle de connaissance solide
                 </h1>
                 <div className="flex flex-wrap md:gap-5 gap-10">
-                    <HomeCard data={cardData[0]} />
-                    <HomeCard data={cardData[1]} />
+                    <NavLink to={'/cours'}>
+                        <HomeCard data={cardData[0]} />
+                    </NavLink>
+                    <NavLink to={'/exercices'}>
+                        <HomeCard data={cardData[1]} />
+                    </NavLink>
                 </div>
             </div>
 
@@ -46,7 +52,9 @@ const HomePage = () => {
                     Nos conseils pour ta carriere
                 </h1>
                 <div className="flex flex-wrap">
-                    <HomeCard data={cardData[2]} />
+                    <NavLink to={'/carriere'}>
+                        <HomeCard data={cardData[2]} />
+                    </NavLink>
                 </div>
             </div>
         </section>
