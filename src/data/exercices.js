@@ -16,5 +16,13 @@ export const data = [
             'Télécharges le fichier ou clone le repo, codes et executes les test pour te corriger :)',
         github: 'https://github.com/ArilessTir/codia_python_exo/tree/main/Square',
     },
-    { id: 3, name: '', description: '', instruction: '', github: '' },
+    {
+        id: 3,
+        name: 'Racine ²',
+        description:
+            'Écrire une fonction qui retourne le carré de deux nombres ',
+        instruction:
+            'Télécharges le fichier ou clone le repo, codes et executes les test pour te corriger :)',
+        github: 'https://github.com/ArilessTir/codia_python_exo/tree/main/Square',
+    },
 ];
