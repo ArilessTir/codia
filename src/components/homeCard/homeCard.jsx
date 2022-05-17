@@ -6,10 +6,14 @@ const HomeCard = ({ data }) => {
             style={{
                 background: data.background,
             }}
-            className="h-[300px] w-[520px] rounded-md shadow-lg cursor-pointer"
+            className="h-[19rem] md:w-[32rem] sm:w-[29rem] w-[22rem] rounded-md shadow-lg cursor-pointer"
         >
-            <div className="h-3/4 overflow-hidden">
-                <img src={data.svg} alt="" className="ml-14 my-5" />
+            <div className="h-3/4 overflow-hidden relative">
+                <img
+                    src={data.svg}
+                    alt=""
+                    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                />
             </div>
 
             <div className="h-1/4 bg-white px-8 rounded-b-md shadow-lg ">
