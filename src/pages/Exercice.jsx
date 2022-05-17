@@ -43,8 +43,8 @@ const Exercice = () => {
                 <div className="flex items-center space-x-2 bg-[#BF2D85] p-2 rounded-md">
                     <AiOutlineDownload size={25} className="text-white" />
                     <a
-                        href={exo.github}
-                        target="_blank"
+                        href="#"
+                        // target="_blank"
                         className="cursor-pointer text-white"
                     >
                         Télécharger

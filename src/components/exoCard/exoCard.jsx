@@ -17,7 +17,9 @@ const ExoCard = ({ data }) => {
                         justify-end items-start pl-3 pb-3 space-y-1"
         >
             <h1 className="text-white text-xl font-extrabold">{data.name}</h1>
-            <p className="text-white text-xs font-semibold">Python</p>
+            <p className="text-white text-xs font-semibold">
+                {data.technology}
+            </p>
             <Tag name="Exercice" />
             <img className="absolute right-0 bottom-0" src={python} alt="" />
         </Link>

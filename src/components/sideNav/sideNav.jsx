@@ -34,13 +34,13 @@ const SideNav = () => {
         >
             {open ? (
                 <HiChevronDoubleLeft
-                    size={20}
+                    size={25}
                     onClick={handleOpen}
                     className="cursor-pointer hover:bg-white hover:text-[#282944] rounded-md"
                 />
             ) : (
                 <HiChevronDoubleRight
-                    size={20}
+                    size={25}
                     onClick={handleOpen}
                     className="cursor-pointer hover:bg-white  hover:text-[#282944] rounded-md"
                 />
