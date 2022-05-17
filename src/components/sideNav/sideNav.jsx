@@ -20,7 +20,7 @@ const SideNav = () => {
         setOpen(!open);
         console.log(open);
         if (open === true) {
-            gsap.to('.sideBar', { width: '35px', paddingLeft: '0' });
+            gsap.to('.sideBar', { width: '30px', paddingLeft: '0' });
         } else {
             gsap.to('.sideBar', { width: '200px', paddingLeft: '8px' });
         }
@@ -34,13 +34,13 @@ const SideNav = () => {
         >
             {open ? (
                 <HiChevronDoubleLeft
-                    size={30}
+                    size={20}
                     onClick={handleOpen}
                     className="cursor-pointer hover:bg-white hover:text-[#282944] rounded-md"
                 />
             ) : (
                 <HiChevronDoubleRight
-                    size={30}
+                    size={20}
                     onClick={handleOpen}
                     className="cursor-pointer hover:bg-white  hover:text-[#282944] rounded-md"
                 />
@@ -51,56 +51,56 @@ const SideNav = () => {
                     className="flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
-                    <RiChinaRailwayLine className="fixed" size={30} />
-                    <div className="txt text-2xl ml-10">Parcours</div>
+                    <RiChinaRailwayLine className="fixed" size={20} />
+                    <div className="txt text-xl ml-8">Parcours</div>
                 </NavLink>
                 <NavLink
                     to={'/exercices'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
-                    <RiFileCodeFill className="fixed" size={30} />
-                    <div className="txt text-2xl ml-10">Exercices</div>
+                    <RiFileCodeFill className="fixed" size={20} />
+                    <div className="txt text-xl ml-8">Exercices</div>
                 </NavLink>
                 <NavLink
                     to={'/cours'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
-                    <RiBook2Fill className="fixed" size={30} />
-                    <div className="txt text-2xl ml-10">Cours</div>
+                    <RiBook2Fill className="fixed" size={20} />
+                    <div className="txt text-xl ml-8">Cours</div>
                 </NavLink>
                 <NavLink
                     to={'/quizz'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
-                    <RiQuestionFill className="fixed" size={30} />
-                    <div className="txt text-2xl ml-10 ">Quizz</div>
+                    <RiQuestionFill className="fixed" size={20} />
+                    <div className="txt text-xl ml-8 ">Quizz</div>
                 </NavLink>
                 <NavLink
                     to={'/projets'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
-                    <AiFillProject className="fixed" size={30} />
-                    <div className="txt text-2xl ml-10 ">Projets</div>
+                    <AiFillProject className="fixed" size={20} />
+                    <div className="txt text-xl ml-8 ">Projets</div>
                 </NavLink>
                 <NavLink
                     to={'/carriere'}
                     className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
-                    <RiBriefcaseFill className="fixed" size={30} />
-                    <div className="txt text-2xl ml-10 ">Carriere</div>
+                    <RiBriefcaseFill className="fixed" size={20} />
+                    <div className="txt text-xl ml-8 ">Carriere</div>
                 </NavLink>
             </section>
             <div
                 className=" flex items-center cursor-pointer
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
             >
-                <RiLogoutBoxLine className="fixed" size={30} />
-                <div className="txt text-2xl ml-10 ">Deconnexion</div>
+                <RiLogoutBoxLine className="fixed" size={20} />
+                <div className="txt text-xl ml-8 ">Deconnexion</div>
             </div>
         </div>
     );
