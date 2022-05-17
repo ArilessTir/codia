@@ -48,7 +48,7 @@ const SideNav = () => {
             <section className="space-y-2 mb-20">
                 <NavLink
                     to={'/parcours'}
-                    className="flex items-center cursor-pointer
+                    className="flex items-center cursor-pointer pointer-events-none text-gray-500
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiChinaRailwayLine className="fixed" size={20} />
@@ -72,7 +72,7 @@ const SideNav = () => {
                 </NavLink>
                 <NavLink
                     to={'/quizz'}
-                    className=" flex items-center cursor-pointer
+                    className=" flex items-center cursor-pointer pointer-events-none text-gray-500
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <RiQuestionFill className="fixed" size={20} />
@@ -80,7 +80,7 @@ const SideNav = () => {
                 </NavLink>
                 <NavLink
                     to={'/projets'}
-                    className=" flex items-center cursor-pointer
+                    className=" flex items-center cursor-pointer pointer-events-none text-gray-500
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
                 >
                     <AiFillProject className="fixed" size={20} />
