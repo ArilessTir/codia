@@ -1,8 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
-
 import { courses } from '../data/courses';
-import CoursesBlock from '../components/coursesBlock/coursesBlock';
+import ArticleBlock from '../components/articleBlock/articleBlock';
 
 const Cours = () => {
     const { id } = useParams();
@@ -25,7 +24,7 @@ const Cours = () => {
             </div>
             <article className="mt-8 max-w-3xl mx-auto flex flex-col ">
                 {data.map((courses) => {
-                    return <CoursesBlock data={courses} />;
+                    return <ArticleBlock data={courses} />;
                 })}
             </article>
         </section>

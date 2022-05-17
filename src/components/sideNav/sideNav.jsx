@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
     RiChinaRailwayLine,
-    RiBankFill,
     RiFileCodeFill,
     RiBriefcaseFill,
     RiLogoutBoxLine,
@@ -20,17 +19,17 @@ const SideNav = () => {
         setOpen(!open);
         console.log(open);
         if (open === true) {
-            gsap.to('.sideBar', { width: '30px', paddingLeft: '0' });
+            gsap.to('.sideBar', { width: '1.9rem', paddingLeft: '0' });
         } else {
-            gsap.to('.sideBar', { width: '200px', paddingLeft: '8px' });
+            gsap.to('.sideBar', { width: '13rem', paddingLeft: '8px' });
         }
     };
 
     return (
         <div
-            className="sideBar h-[100vh] w-[200px] bg-[#282944]
+            className="sideBar h-full w-52 bg-[#282944]
                     text-white fixed overflow-hidden pl-2 pt-20
-                    md:flex flex-col justify-between hidden"
+                    md:flex flex-col justify-between "
         >
             {open ? (
                 <HiChevronDoubleLeft
