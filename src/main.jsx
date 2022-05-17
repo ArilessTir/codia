@@ -12,6 +12,7 @@ import Job from './pages/Job';
 import Quizz from './pages/Quizz';
 import Projects from './pages/Projects';
 import Path from './pages/Path';
+import Cours from './pages/Cours';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/cours" element={<Courses />} />
+                <Route path="/cours/:id" element={<Cours />} />
                 <Route path="/exercices" element={<Exercices />} />
                 <Route path="/exercices/:id" element={<Exercice />} />
                 <Route path="/parcours" element={<Path />} />
