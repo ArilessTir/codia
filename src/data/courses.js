@@ -15,6 +15,7 @@ export const courses = [
                 Content: `print('Hello World')`,
                 Photo: '',
                 Type: 'Code',
+                Technology: 'Python',
             },
             {
                 Title: 'Les données quantitatives',
