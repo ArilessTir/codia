@@ -9,7 +9,14 @@ const Jobs = () => {
                 Retrouve nos conseils pour ta carriere
             </h1>
             <div className="flex flex-wrap gap-5">
-                <CareerCard data={career[0]['Metadata']} />
+                {career.map((meta) => {
+                    return (
+                        <CareerCard
+                            data={meta['Metadata']}
+                            key={meta['Metadata'].Id}
+                        />
+                    );
+                })}
             </div>
         </section>
     );

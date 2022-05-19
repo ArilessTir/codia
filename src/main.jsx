@@ -9,6 +9,7 @@ import Courses from './pages/Courses';
 import Exercices from './pages/Exercices';
 import Exercice from './pages/Exercice';
 import Jobs from './pages/Jobs';
+import Job from './pages/Job';
 import Quizz from './pages/Quizz';
 import Projects from './pages/Projects';
 import Path from './pages/Path';
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="/exercices/:id" element={<Exercice />} />
                 <Route path="/parcours" element={<Path />} />
                 <Route path="/carriere" element={<Jobs />} />
+                <Route path="/carriere/:id" element={<Job />} />
                 <Route path="/quizz" element={<Quizz />} />
                 <Route path="/projets" element={<Projects />} />
             </Routes>
