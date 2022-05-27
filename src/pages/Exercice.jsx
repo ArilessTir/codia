@@ -8,7 +8,7 @@ const Exercice = () => {
     const { id } = useParams();
     const exo = data[id - 1];
     return (
-        <section className="pt-20 md:pl-60 px-5 sm:px-0">
+        <section className="pt-20 md:pl-60 px-5 ">
             <h1 className="text-4xl font-bold my-6"> {exo.name} </h1>
 
             <div className="my-5">
