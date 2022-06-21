@@ -4,9 +4,30 @@ import { data } from '../data/exercices';
 import { AiFillGithub, AiOutlineDownload } from 'react-icons/ai';
 import Description from '../assets/icons/Description.svg';
 import Instruction from '../assets/icons/Instruction.svg';
+import { ref, getDownloadURL } from 'firebase/storage';
+import storage from '../firebase';
+
 const Exercice = () => {
+    const storageRef = ref(storage, '/HelloWorld/hello_world.py');
+
     const { id } = useParams();
     const exo = data[id - 1];
+    const test = () => {
+        getDownloadURL(storageRef)
+            .then((url) => {
+                const xhr = new XMLHttpRequest();
+                xhr.responseType = 'blob';
+                xhr.onload = (event) => {
+                    const blob = xhr.response;
+                };
+                xhr.open('GET', url);
+                xhr.send();
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
+
     return (
         <section className="pt-20 md:pl-60 px-5 ">
             <h1 className="text-4xl font-bold my-6"> {exo.name} </h1>
@@ -46,6 +67,9 @@ const Exercice = () => {
                         href="#"
                         // target="_blank"
                         className="cursor-pointer text-white"
+                        onClick={() => {
+                            test();
+                        }}
                     >
                         Télécharger
                     </a>
