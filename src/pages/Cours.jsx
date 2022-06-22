@@ -9,7 +9,7 @@ const Cours = () => {
     const data = courses[id - 1]['Data'];
     console.log(data);
     return (
-        <section className="pt-20 md:pl-60 px-5 sm:px-0 max-w-7xl mx-auto">
+        <section className="pt-20 md:pl-60 px-5 max-w-7xl mx-auto">
             <div className="">
                 <h1 className="text-3xl font-bold"> {meta.Title} </h1>
                 <div className="flex gap-4 my-2">

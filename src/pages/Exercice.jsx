@@ -4,11 +4,34 @@ import { data } from '../data/exercices';
 import { AiFillGithub, AiOutlineDownload } from 'react-icons/ai';
 import Description from '../assets/icons/Description.svg';
 import Instruction from '../assets/icons/Instruction.svg';
+import { ref, getDownloadURL } from 'firebase/storage';
+import storage from '../firebase';
+import axios from 'axios';
+import fileDownload from 'js-file-download';
+
 const Exercice = () => {
     const { id } = useParams();
     const exo = data[id - 1];
+    const storageRef = ref(storage, `Exercices/${exo.zipName}.zip`);
+    const download = () => {
+        getDownloadURL(storageRef)
+            .then((url) => {
+                axios
+                    .get(url, {
+                        responseType: 'blob',
+                    })
+                    .then((res) => {
+                        fileDownload(res.data, `${exo.zipName}.zip`);
+                    });
+            })
+            .catch((error) => {
+                console.log(error);
+                alert('Erreur lors du téléchargement ');
+            });
+    };
+
     return (
-        <section className="pt-20 md:pl-60 px-5 sm:px-0">
+        <section className="pt-20 md:pl-60 px-5 ">
             <h1 className="text-4xl font-bold my-6"> {exo.name} </h1>
 
             <div className="my-5">
@@ -46,6 +69,7 @@ const Exercice = () => {
                         href="#"
                         // target="_blank"
                         className="cursor-pointer text-white"
+                        onClick={download}
                     >
                         Télécharger
                     </a>

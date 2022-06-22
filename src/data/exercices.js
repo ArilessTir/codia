@@ -1,6 +1,7 @@
 export const data = [
     {
         id: 1,
+        zipName: 'HelloWorld',
         name: 'Hello world',
         description: 'Écris une fonction qui retourne Hello World',
         instruction:
@@ -10,6 +11,7 @@ export const data = [
     },
     {
         id: 2,
+        zipName: 'Square',
         name: 'Racine ²',
         description: `Écrire une fonction qui retourne le carré d'un nombre`,
         instruction:
@@ -19,6 +21,7 @@ export const data = [
     },
     {
         id: 3,
+        zipName: 'Division',
         name: 'Division',
         description: `Écrire une fonction qui retourne le résultat d'une division`,
         instruction:
