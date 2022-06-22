@@ -6,25 +6,27 @@ import Description from '../assets/icons/Description.svg';
 import Instruction from '../assets/icons/Instruction.svg';
 import { ref, getDownloadURL } from 'firebase/storage';
 import storage from '../firebase';
+import axios from 'axios';
+import fileDownload from 'js-file-download';
 
 const Exercice = () => {
-    const storageRef = ref(storage, '/HelloWorld/hello_world.py');
-
     const { id } = useParams();
     const exo = data[id - 1];
-    const test = () => {
+    const storageRef = ref(storage, `Exercices/${exo.zipName}.zip`);
+    const download = () => {
         getDownloadURL(storageRef)
             .then((url) => {
-                const xhr = new XMLHttpRequest();
-                xhr.responseType = 'blob';
-                xhr.onload = (event) => {
-                    const blob = xhr.response;
-                };
-                xhr.open('GET', url);
-                xhr.send();
+                axios
+                    .get(url, {
+                        responseType: 'blob',
+                    })
+                    .then((res) => {
+                        fileDownload(res.data, `${exo.zipName}.zip`);
+                    });
             })
             .catch((error) => {
                 console.log(error);
+                alert('Erreur lors du téléchargement ');
             });
     };
 
@@ -67,9 +69,7 @@ const Exercice = () => {
                         href="#"
                         // target="_blank"
                         className="cursor-pointer text-white"
-                        onClick={() => {
-                            test();
-                        }}
+                        onClick={download}
                     >
                         Télécharger
                     </a>
