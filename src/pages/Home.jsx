@@ -29,7 +29,7 @@ const HomePage = () => {
 
     return (
         <section className="pt-20 md:pl-60 px-5 sm:px-0 mx-auto">
-            <h1 className="text-3xl font-bold">Bienvue sur Codia</h1>
+            <h1 className="text-3xl font-bold">Bienvenue sur Codia</h1>
             <p className="text-[#BF2D85]">une nouvelle maniere d'apprendre</p>
 
             <div className=" mt-10">
