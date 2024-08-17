@@ -95,7 +95,7 @@ const SideNav = () => {
                 </NavLink>
             </section>
             <div
-                className=" flex items-center cursor-pointer
+                className=" flex items-center cursor-pointer pointer-events-none text-gray-500
                                 hover:bg-white hover:bg-opacity-30 hover:border-r-[3px] h-12"
             >
                 <RiLogoutBoxLine className="fixed" size={20} />
