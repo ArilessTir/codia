@@ -34,7 +34,7 @@ const NavBar = () => {
                     )}
                 </div>
             </div>
-            <div className=" h-10 w-10 rounded-full bg-yellow-500 md:block hidden"></div>
+           // <div className=" h-10 w-10 rounded-full bg-yellow-500 md:block hidden"></div>
         </nav>
     );
 };
